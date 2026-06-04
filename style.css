@@ -1,0 +1,295 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#0f172a,#1e293b);
+    padding:20px;
+}
+
+.container{
+    background:#111827;
+    width:600px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+    color:white;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.input-section{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+input{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+#addBtn{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#06b6d4;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#addBtn:hover{
+    transform:scale(1.03);
+}
+
+#taskList{
+    list-style:none;
+}
+
+.task-item{
+    background:#1e293b;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.task-info{
+    flex:1;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+.task-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.task-buttons button{
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.complete-btn{
+    background:#22c55e;
+    color:white;
+}
+
+.edit-btn{
+    background:#f59e0b;
+    color:black;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+}
+
+@media(max-width:650px){
+
+    .container{
+        width:100%;
+    }
+
+    .task-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .task-buttons{
+        width:100%;
+        justify-content:space-between;
+    }
+}
+#priority,
+#searchTask{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+    width:100%;
+margin-top:15px;
+}
+
+.high{
+    border-left:6px solid #ef4444;
+}
+
+.medium{
+    border-left:6px solid #f59e0b;
+}
+
+.low{
+    border-left:6px solid #22c55e;
+}
+.filter-buttons{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+}
+
+.filter-buttons button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#334155;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.filter-buttons button:hover{
+    background:#06b6d4;
+    color:black;
+}
+.progress-container{
+    width:100%;
+    height:20px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+    margin:20px 0 10px;
+}
+
+#progressBar{
+    height:100%;
+    width:0%;
+    background:#22c55e;
+    transition:0.4s;
+}
+
+#progressText{
+    text-align:center;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+.pomodoro-container{
+    margin:30px 0;
+    text-align:center;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+#timer{
+    font-size:50px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#22c55e;
+}
+
+.timer-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.timer-buttons button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+#startTimer{
+    background:#22c55e;
+    color:white;
+}
+
+#pauseTimer{
+    background:#f59e0b;
+}
+
+#resetTimer{
+    background:#ef4444;
+    color:white;
+}
+
+.timer-buttons button:hover{
+    transform:scale(1.03);
+}
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#22c55e;
+}
+.sound-controls{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.sound-controls button{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#pauseNotification{
+    background:#64748b;
+    color:white;
+}
+
+#stopAlarm{
+    background:#dc2626;
+    color:white;
+}
+
+.sound-controls button:hover{
+    transform:scale(1.03);
+}
