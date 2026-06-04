@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>To Do App</h1>
+
+    <div class="input-section">
+
+        <input type="text" id="taskInput" placeholder="Enter Task">
+
+<input type="datetime-local" id="taskDate">
+
+<select id="priority">
+
+    <option value="High">
+        High Priority
+    </option>
+
+    <option value="Medium">
+        Medium Priority
+    </option>
+
+    <option value="Low">
+        Low Priority
+    </option>
+
+</select>
+
+
+
+<button id="addBtn">
+    Add Task
+</button>
+    </div>
+
+<input type="text" id="searchTask" placeholder="Search Tasks">
+<div class="filter-buttons">
+
+    <button id="allBtn">
+        All
+    </button>
+
+    <button id="completedBtn">
+        Completed
+    </button>
+
+    <button id="pendingBtn">
+        Pending
+    </button>
+
+</div>
+<div class="progress-container">
+    <div class="dashboard">
+
+    <div class="card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+    </div>
+
+</div>
+
+    <div id="progressBar"></div>
+
+</div>
+
+<p id="progressText">
+    0% Completed
+</p>
+<div class="pomodoro-container">
+
+    <h2>Pomodoro Timer</h2>
+
+    <div id="timer">
+        25:00
+    </div>
+
+    <div class="timer-buttons">
+
+        <button id="startTimer">
+            Start
+        </button>
+
+        <button id="pauseTimer">
+            Pause
+        </button>
+
+        <button id="resetTimer">
+            Reset
+        </button>
+
+    </div>
+    <div class="sound-controls">
+
+    <button id="pauseNotification">
+        🔕 Pause Notification
+    </button>
+
+    <button id="stopAlarm">
+        🚨 Stop Alarm
+    </button>
+
+</div>
+
+</div>
+    <ul id="taskList"></ul>
+
+
+</div>
+
+<audio id="notificationSound" src="sounds/notification.mp3"></audio>
+
+<audio id="alarmSound" src="sounds/alarm.mp3" loop></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
